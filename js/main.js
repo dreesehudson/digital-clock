@@ -19,9 +19,13 @@ function getTime() {
     day = padSingleDigit(day);
 
 
-    //setting pm if after noon and before midnight, all else will remain am
-    if (hour >= 12 && hour <= 23) {
+    //setting 12 hour time
+    if (hour > 12) {
         hour = hour - 12;
+    }
+    
+    //setting pm if after noon and before midnight, all else will remain am
+    if (hour >= 12) {
         amPM = 'pm';
     }
 
